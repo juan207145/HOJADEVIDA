@@ -1,0 +1,154 @@
+/* Estilos generales para el cuerpo de la página */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif; /* Fuente moderna y legible */
+}
+
+/* Contenedor general que centra el contenido y le da padding */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* Contenedor del encabezado con imagen y texto alineados horizontalmente */
+#Container {
+    display: flex;              /* Permite que los hijos estén en fila */
+    align-items: center;        /* Centra verticalmente los elementos */
+    margin: 30px;
+    padding: 20px;
+}
+
+/* Contenedor del texto dentro del encabezado */
+#Texto {
+    flex: 1;                    /* Ocupa el espacio disponible */
+    text-align: center;         /* Centra el texto horizontalmente */
+}
+
+/* Estilos para la imagen del encabezado */
+#Imagen {
+    margin: 20px;
+    width: 200px;
+    height: auto;
+    border-radius: 20px;        /* Bordes redondeados */
+    background-color: white;    /* Fondo blanco */
+}
+
+/* Encabezado completo con color y bordes redondeados */
+header {
+    padding-bottom: 30px;
+    background-color: #0077b5;  /* Azul tipo LinkedIn */
+    border-radius: 30px;
+}
+
+/* Título dentro del encabezado */
+header h1 {
+    padding: 5px;
+    font-size: 2.8em;
+    color-scheme: black; /* Esta propiedad no tiene efecto, probablemente sea un error */
+    margin-bottom: 5px;
+}
+
+/* Subtítulo en el encabezado */
+header p {
+    font-size: 1.1em;
+    color: white;
+}
+
+/* Sección de contenido con fondo blanco, sombras y bordes redondeados */
+.section {
+    background: white;
+    border-radius: 16px;
+    padding: 25px 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease; /* Animación al hacer hover */
+}
+
+/* Efecto de elevación al pasar el mouse sobre la sección */
+.section:hover {
+    transform: translateY(-5px);
+}
+
+/* Estilos generales para subtítulos */
+h2 {
+    margin-top: 0;
+    color: var(--secondary);            /* Variable personalizada (debes definirla) */
+    border-bottom: 2px solid var(--secondary);
+    padding-bottom: 5px;
+}
+
+/* Listas */
+ul {
+    padding-left: 20px;
+}
+
+/* Contenedor para dividir contenido en columnas */
+.columns {
+    display: flex;
+    flex-wrap: wrap;    /* Permite que las columnas bajen si no caben */
+    gap: 20px;          /* Espacio entre columnas */
+}
+
+/* Cada columna en las secciones de Educación/Cursos */
+.column {
+    flex: 1;            /* Cada columna ocupa mismo tamaño */
+    min-width: 280px;   /* Evita que se haga demasiado pequeña */
+}
+
+/* Grid para mostrar habilidades en cuadrícula */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+}
+
+/* Estilo de cada habilidad */
+.skills-grid li {
+    background: linear-gradient(135deg, #e0ecff, #f7faff);
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+}
+
+/* Contenedor de enlaces sociales */
+.social-links a {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+/* Estilos para las imágenes de los iconos sociales */
+.social-links img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto de zoom al pasar el mouse sobre iconos */
+.social-links a:hover img {
+    transform: scale(1.1);
+}
+
+/* Botón de contacto */
+.contact button {
+    margin-top: 15px;
+    padding: 12px 24px;
+    font-size: 1em;
+    color: var(--white);         /* Variable personalizada */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #0077b5;   /* Azul corporativo */
+}
+
+/* Responsive: ajusta las columnas en pantallas pequeñas */
+@media (max-width: 768px) {
+    .columns {
+        flex-direction: column;
+    }
+}
+
